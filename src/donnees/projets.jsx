@@ -1,4 +1,4 @@
-[
+const projets = [
     {
         id: "00",
         titre: "Tavern Rush",
@@ -38,4 +38,18 @@
         ],
         cheminVersMiniature: "images/u92"
     },
+    {
+        id: "03",
+        titre: "Yeehaw Simulator",
+        sousTitre: "Projet de Unity 2D de deuxième session",
+        description: "Yeehaw Simulator vous permet d'attraper des vaches grâce à votre lasso. Ne vous faites pas attraper par les extraterrestres!",
+        lien: "https://poclerson.itch.io/yeehaw-simulator",
+        competences: [
+            "Unity 2D",
+            "C#"
+        ],
+        cheminVersMiniature: "images/yeehaw-simulator"
+    },
 ]
+
+export default projets;
