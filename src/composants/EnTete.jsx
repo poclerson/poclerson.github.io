@@ -9,28 +9,30 @@ export default function EnTete({nom, setNom}) {
 
     const [titre, setTitre] = useState('Entete entete__sortie');
 
-    const handleNavigation = useCallback(
+    const gererNavigation = useCallback(
         e => {
-        const window = e.currentTarget;
-        if (y > window.scrollY) {
-            setTitre('EnTete entete__entree');
-            setNom('complet');
-        } else if (y < window.scrollY) {
-            setTitre('EnTete entete__sortie');
-            setNom('initiales');
-        }
-        setY(window.scrollY);
+            const window = e.currentTarget;
+                if (y > window.scrollY) {
+                    setTitre('EnTete entete__entree');
+                    setNom('complet');
+                } 
+                
+                else if (y < window.scrollY) {
+                    setTitre('EnTete entete__sortie');
+                    setNom('initiales');
+                }
+
+            setY(window.scrollY);
         }, [y]
     );
   
     useEffect(() => {
         setY(window.scrollY);
-        window.addEventListener("scroll", handleNavigation);
-    
+        window.addEventListener("scroll", gererNavigation);
         return () => {
-        window.removeEventListener("scroll", handleNavigation);
+            window.removeEventListener("scroll", gererNavigation);
         };
-    }, [handleNavigation]);
+    }, [gererNavigation]);
 
 
 

@@ -9,6 +9,7 @@ import Accueil from './composants/Accueil';
 import {useState} from 'react';
 
 export default function App() {
+    
     const [nom, setNom] = useState('initiales');
     return (
         <div className="App">

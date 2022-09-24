@@ -2,7 +2,9 @@ import './Projet.scss';
 
 export default function Projet({titre, sousTitre, description, lien, competences, cheminVersMiniature}) {
     return (
-        <li className="Projet">
+        <li 
+            className="Projet"
+        >
             <h2 className="Projet__titre">{titre.toUpperCase()}</h2>
             
             <img src={"./images/" + cheminVersMiniature} alt={titre} className="Projet__miniature"/>
