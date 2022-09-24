@@ -1,5 +1,6 @@
 .Accueil {
-    position: relative;
+    position: fixed;
+    top: 0;
 
     &__fond {
         height: 100vh;

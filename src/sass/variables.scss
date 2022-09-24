@@ -15,6 +15,14 @@ $h2-tailles-police: (
 );
 
 $h3-tailles-police: (
+    0px: 16px,
+    360px: 28px,
+    640px: 36px,
+    1024px: 52px,
+    1440px: 70px
+);
+
+$h4-tailles-police: (
     0px: 14px,
     360px: 20px,
     640px: 28px,
@@ -23,19 +31,27 @@ $h3-tailles-police: (
 );
 
 $p-tailles-police: (
-    0px: 8px,
-    360px: 10px,
-    640px: 12px,
-    1024px: 16px,
-    1440px: 20px
+    0px: 12px,
+    360px: 14px,
+    640px: 20px,
+    1024px: 28px,
+    1440px: 32px
 );
 
 $theme-clair: (
-    titre: rgb(157, 255, 0),
-    sous-titre: rgb(255, 255, 255),
+    titre: rgb(255, 244, 180),
+    sous-titre: rgb(255, 244, 180),
     texte: rgb(255, 255, 255),
-    lien: rgb(157, 255, 0),
-    lien-visite: rgb(109, 177, 0),
-    hover: #ff0000,
-    fond: #8400ff
+    lien: rgb(25, 0, 255),
+    lien-visite: rgb(124, 88, 255),
+    fond: #242424
+);
+
+$theme-boites: (
+    titre: rgb(26, 26, 26),
+    sous-titre: rgb(25, 0, 255),
+    texte: rgb(83, 83, 83),
+    lien: rgb(25, 0, 255),
+    lien-visite: rgb(173, 173, 173),
+    fond:  rgb(255, 244, 180)
 );

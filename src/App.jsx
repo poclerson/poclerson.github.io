@@ -9,13 +9,16 @@ import Accueil from './composants/Accueil';
 import {useState} from 'react';
 
 export default function App() {
-    
-    const [nom, setNom] = useState('initiales');
+    // Gestion du scroll
+    const [y, setY] = useState(window.scrollY);
+
+    const [enteteOuverte, setEnteteOuverte] = useState(false);
+
     return (
         <div className="App">
-            <EnTete nom={nom} setNom={setNom} />
+            <EnTete ouvert={enteteOuverte} setOuvert={setEnteteOuverte} y={y} setY={setY} />
             <Accueil />
-            <Projets />
+            <Projets enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY}  />
         </div>
     );
 }

@@ -17,8 +17,13 @@
         color: map-get($map: $theme, $key: titre);
     }
 
-    h2, h3 {
+    h2, h4 {
         color: map-get($map: $theme, $key: sous-titre);
+    }
+
+    h3 {
+        color: transparent;
+        -webkit-text-stroke: 1px map-get($map: $theme, $key: sous-titre);
     }
 
     p {
@@ -27,6 +32,10 @@
 
     a {
         color: map-get($map: $theme, $key: lien);
+
+        &:hover {
+            color: map-get($map: $theme, $key: titre);
+        }
     }
 
     background-color: map-get($theme, fond);

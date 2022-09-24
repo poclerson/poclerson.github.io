@@ -5,11 +5,9 @@ import './Projets.scss';
 
 import {useState, useEffect, useCallback} from 'react';
 
-export default function Projets() {
+export default function Projets({enteteOuverte, setEnteteOuverte, y, setY}) {
     
     // Gestion du scroll
-    const [y, setY] = useState(window.scrollY);
-
     const gererNavigation = useCallback(
         e => {
             const window = e.currentTarget;
@@ -29,7 +27,7 @@ export default function Projets() {
         <section className="Projets" style={{top: -y * 3 + window.innerHeight}}>
             <ul className="Projets__liste">
                 {projets.map(projet => 
-                    <Projet key={projet.id} {...projet} />    
+                    <Projet key={projet.id} {...projet}  enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY} />    
                 )}
             </ul>
         </section>

@@ -1,5 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const liens = [
     {
@@ -16,28 +17,10 @@ const liens = [
     },
     {
         id: "02",
-        nom: "github",
-        lien: "https://github.com/poclerson",
-        icone: <GitHubIcon />
-    },
-    {
-        id: "03",
-        nom: "github",
-        lien: "https://github.com/poclerson",
-        icone: <GitHubIcon />
-    },
-    {
-        id: "04",
-        nom: "github",
-        lien: "https://github.com/poclerson",
-        icone: <GitHubIcon />
-    },
-    {
-        id: "05",
-        nom: "github",
-        lien: "https://github.com/poclerson",
-        icone: <GitHubIcon />
-    },
+        nom: "courriel",
+        lien: "mailto:poclerson@gmail.com",
+        icone: <AlternateEmailIcon />
+    }
 ]
 
 export default liens;

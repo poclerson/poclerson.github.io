@@ -1,21 +1,96 @@
+@import '../sass//mixins.scss';
+@import '../sass/variables.scss';
+
 .Projet {
     width: 100vw;
     position: relative;
 
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+    // padding-top: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    // box-sizing: border-box;
 
     &__titre {
         position: absolute;
-        left: .5em;
-        bottom: .5em;
+        left: 0;
+        bottom: 0;
         margin: .5em;
     }
 
     &__miniature {
         width: 100%;
-        height: 110%;
+    }
+
+    &__modale {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        transform: translateX(200vw);
+        transition: transform .5s ease-in-out;
+
+        &__image {
+            overflow-x: hidden;
+            width: 100%;
+            min-height: 50%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__titre {
+                position: absolute;
+                left: .5em;
+                bottom: .5em;
+                margin: .5em;
+            }
+    
+            &__miniature {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__infos {
+            @include theme($theme-boites);
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            height: 100%;
+
+            &__sous-titre {
+                line-height: .85em;
+                font-size: 3em;
+            }
+
+            &__competences {
+                list-style-type: none;
+                padding: 0;
+
+                &__etiquette {
+                    display: inline;
+                    background-color: map-get($map: $theme-clair, $key: titre);
+                    padding: .5em;
+                    margin: .5em;
+                    border-radius: 5px;
+
+                    &__texte {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+
+    .ouvert {
+        transform: translate(0);
+        transition: transform .5s ease-in-out;
     }
 }

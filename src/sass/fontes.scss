@@ -9,17 +9,26 @@
 
 h1 {
     @include taille-police($h1-tailles-police);
+    font-weight: bolder;
 }
 
 h2 {
     @include taille-police ($h2-tailles-police);
+    font-weight: bold;
 }
 
 h3 {
     @include taille-police ($h3-tailles-police);
+    font-weight: bold;
+}
+
+h4 {
+    @include taille-police ($h4-tailles-police);
+    font-weight: normal;
 }
 
 p, a {
     @include taille-police ($p-tailles-police);
+    font-weight: lighter;
 }
 

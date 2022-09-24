@@ -1,25 +1,18 @@
 import './EnTete.scss';
-import {useState, useEffect, useCallback} from 'react';
 import Liens from './Liens';
 
-export default function EnTete({nom, setNom}) {
+import {useState, useEffect, useCallback} from 'react';
 
-    // Gestion du scroll
-    const [y, setY] = useState(window.scrollY);
-
-    const [titre, setTitre] = useState('Entete entete__sortie');
-
+export default function EnTete({ouvert, setOuvert, y, setY}) {
     const gererNavigation = useCallback(
         e => {
             const window = e.currentTarget;
             if (y > window.scrollY) {
-                setTitre('EnTete entete__entree');
-                setNom('complet');
+                setOuvert(true);
             } 
             
             else if (y < window.scrollY) {
-                setTitre('EnTete entete__sortie');
-                setNom('initiales');
+                setOuvert(false);
             }
 
             setY(window.scrollY);
@@ -27,21 +20,19 @@ export default function EnTete({nom, setNom}) {
     );
   
     useEffect(() => {
-
-
         window.addEventListener("scroll", gererNavigation);
         return () => {
             window.removeEventListener("scroll", gererNavigation);
         };
     }, [gererNavigation]);
 
-
+    console.log(ouvert);
 
     return (
-        <header className={titre}>
+        <header className={ouvert ? "EnTete entete__ouverte" : "EnTete entete__sortie"}>
 
             {
-                nom == 'complet' ?
+                ouvert ?
                     <>
                         <h1 className="EnTete__nom">PIERRE-OLIVIER CLERSON</h1>
                         <Liens />
