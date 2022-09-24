@@ -6,7 +6,7 @@
     @include taille-police($h1-tailles-police);
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -23,16 +23,36 @@
     .Liens {
         @include taille-police($p-tailles-police);
     }
+
+    @media screen and (min-width: 1024px) {
+        width: 20vw;
+        height: 100vh;
+
+        flex-direction: column;
+
+        &__nom {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            line-height: .5em;
+            letter-spacing: -.2em;
+        }
+    }
 }
 
 .entete__entree {
     h1 {
-        animation: entete__entree .1s linear forwards, fadeIn .5s;
+        animation: entete__entree .1s linear forwards, fadeIn .1s;
+        @include texte-contour(map-get($theme-boites, titre));
     }
+
+    background-color: map-get($theme-boites, fond);
+    transition: background-color, .1s, ease-in-out;
 }
 
 .entete__sortie {
     h1 {
-        animation: entete__sortie .1s linear forwards, fadeIn .5s;
+        animation: entete__sortie .1s linear forwards, fadeIn .1s;
     }
+
+    transition: background-color, .1s, ease-in-out;
 }

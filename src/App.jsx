@@ -17,7 +17,7 @@ export default function App() {
     return (
         <div className="App">
             <EnTete ouvert={enteteOuverte} setOuvert={setEnteteOuverte} y={y} setY={setY} />
-            <Accueil />
+            <Accueil y={y} setY={setY} />
             <Projets enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY}  />
         </div>
     );

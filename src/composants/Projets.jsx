@@ -23,8 +23,16 @@ export default function Projets({enteteOuverte, setEnteteOuverte, y, setY}) {
         };
     }, [gererNavigation]);
 
+    function directionProjets() {
+        if (window.innerWidth > 1024) {
+            return {left: -y * 3 + window.innerWidth + 200}
+        }
+
+        return {top: -y * 3 + window.innerHeight}
+    }
+
     return (
-        <section className="Projets" style={{top: -y * 3 + window.innerHeight}}>
+        <section className="Projets" style={directionProjets()}>
             <ul className="Projets__liste">
                 {projets.map(projet => 
                     <Projet key={projet.id} {...projet}  enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY} />    

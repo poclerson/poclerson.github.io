@@ -29,7 +29,7 @@ export default function EnTete({ouvert, setOuvert, y, setY}) {
     console.log(ouvert);
 
     return (
-        <header className={ouvert ? "EnTete entete__ouverte" : "EnTete entete__sortie"}>
+        <header className={ouvert ? "EnTete entete__entree" : "EnTete entete__sortie"}>
 
             {
                 ouvert ?
