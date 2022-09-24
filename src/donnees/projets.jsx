@@ -9,7 +9,7 @@ const projets = [
             "Pixel art",
             "GitHub"
         ],
-        cheminVersMiniature: "images/tavern-rush"
+        cheminVersMiniature: "tavern-rush.png"
     },
     {
         id: "01",
@@ -24,7 +24,7 @@ const projets = [
             "SquareSpace",
             "Git"
         ],
-        cheminVersMiniature: "images/stentors"
+        cheminVersMiniature: "stentors.png"
     },
     {
         id: "02",
@@ -36,7 +36,7 @@ const projets = [
             "Unity 3D",
             "C#"
         ],
-        cheminVersMiniature: "images/u92"
+        cheminVersMiniature: "u92.png"
     },
     {
         id: "03",
@@ -48,7 +48,7 @@ const projets = [
             "Unity 2D",
             "C#"
         ],
-        cheminVersMiniature: "images/yeehaw-simulator"
+        cheminVersMiniature: "yeehaw-simulator.png"
     },
 ]
 

@@ -1,0 +1,15 @@
+.Projet {
+    width: 100vw;
+    position: relative;
+
+    &__titre {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 1em;
+    }
+
+    &__miniature {
+        width: 100%;
+    }
+}

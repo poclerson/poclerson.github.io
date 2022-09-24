@@ -1,0 +1,49 @@
+@import 'variables.scss';
+
+@keyframes entete__entree {
+    0% {
+        font-size: .5em;
+    }
+
+    100% {
+        font-size: 1em;
+    }
+}
+
+@keyframes entete__sortie {
+    0% {
+        font-size: 1em;
+    }
+
+    100% {
+        font-size: .5em;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        color: black;
+    }
+
+    20% {
+        color: white;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+.entete__entree {
+    h1 {
+        animation: entete__entree .1s linear forwards, fadeIn .5s;
+        -webkit-text-stroke: 1px black;
+        color: transparent !important;
+    }
+}
+
+.entete__sortie {
+    h1 {
+        animation: entete__sortie .1s linear forwards, fadeIn .5s;
+    }
+}

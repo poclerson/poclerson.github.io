@@ -1,0 +1,25 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+* {
+    font-family: 'Familjen Grotesk', sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h1 {
+    @include taille-police($h1-tailles-police);
+}
+
+h2 {
+    @include taille-police ($h2-tailles-police);
+}
+
+h3 {
+    @include taille-police ($h3-tailles-police);
+}
+
+p {
+    @include taille-police ($p-tailles-police);
+}
+

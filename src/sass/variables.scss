@@ -1,0 +1,40 @@
+$h1-tailles-police: (
+    0px: 20px,
+    360px: 48px,
+    640px: 56px,
+    1024px: 96px,
+    1440px: 124px
+);
+
+$h2-tailles-police: (
+    0px: 16px,
+    360px: 24px,
+    640px: 30px,
+    1024px: 48px,
+    1440px: 56px
+);
+
+$h3-tailles-police: (
+    0px: 12px,
+    360px: 18px,
+    640px: 22px,
+    1024px: 32px,
+    1440px: 40px
+);
+
+$p-tailles-police: (
+    0px: 8px,
+    360px: 10px,
+    640px: 12px,
+    1024px: 16px,
+    1440px: 20px
+);
+
+$theme-clair: (
+    titre: blue,
+    sous-titre: #fff,
+    texte: #000,
+    liens: #2600ff,
+    hover: #ff0000,
+    fond: #ffffff
+);

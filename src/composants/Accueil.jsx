@@ -1,7 +1,7 @@
 export default function Accueil() {
     return (
-        <div className="Accueil">
-            
-        </div>
+        <section className="Accueil">
+            <img src="images/po.JPEG" alt="" className="Accueil__fond"/>
+        </section>
     )
 }

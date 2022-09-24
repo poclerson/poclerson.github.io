@@ -1,0 +1,24 @@
+@import '../sass/animations.scss';
+@import '../sass/mixins.scss';
+@import '../sass/variables.scss';
+
+.EnTete {
+    @include taille-police($h1-tailles-police);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+
+    z-index: 2;
+
+    border-bottom: 1px solid black;
+
+    &__nom {
+        text-align: center;
+    }
+}
