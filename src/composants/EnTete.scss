@@ -13,12 +13,28 @@
     left: 0;
 
     width: 100vw;
+    padding: .25em;
+    box-sizing: border-box;
 
     z-index: 2;
 
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid map-get($theme-clair, titre);
 
-    &__nom {
-        text-align: center;
+    .Liens {
+        @include taille-police($p-tailles-police);
+    }
+}
+
+.entete__entree {
+    h1 {
+        animation: entete__entree .1s linear forwards, fadeIn .5s;
+    }
+}
+
+.entete__sortie {
+    h1 {
+        animation: entete__sortie .1s linear forwards, fadeIn .5s;
+        -webkit-text-stroke: 1px map-get($theme-clair, titre);
+        color: transparent !important;
     }
 }

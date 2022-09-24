@@ -1,0 +1,13 @@
+.Accueil {
+    position: relative;
+
+    &__fond {
+        height: 100vh;
+    }
+
+    &__infos {
+        position: absolute;
+        bottom: 0;
+        margin: .5em;
+    }
+}

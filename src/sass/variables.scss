@@ -31,10 +31,11 @@ $p-tailles-police: (
 );
 
 $theme-clair: (
-    titre: blue,
-    sous-titre: #fff,
-    texte: #000,
-    liens: #2600ff,
+    titre: rgb(157, 255, 0),
+    sous-titre: rgb(255, 255, 255),
+    texte: rgb(255, 255, 255),
+    lien: rgb(157, 255, 0),
+    lien-visite: rgb(109, 177, 0),
     hover: #ff0000,
-    fond: #ffffff
+    fond: #8400ff
 );

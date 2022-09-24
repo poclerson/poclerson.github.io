@@ -19,7 +19,7 @@ h3 {
     @include taille-police ($h3-tailles-police);
 }
 
-p {
+p, a {
     @include taille-police ($p-tailles-police);
 }
 

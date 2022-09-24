@@ -1,22 +1,23 @@
 import './EnTete.scss';
 import {useState, useEffect, useCallback} from 'react';
+import Liens from './Liens';
 
-export default function EnTete() {
+export default function EnTete({nom, setNom}) {
 
     // Gestion du scroll
     const [y, setY] = useState(window.scrollY);
 
-    const [titre, setTitre] = useState('Entete entete__entree');
+    const [titre, setTitre] = useState('Entete entete__sortie');
 
     const handleNavigation = useCallback(
         e => {
         const window = e.currentTarget;
         if (y > window.scrollY) {
             setTitre('EnTete entete__entree');
-            setNom('PIERRE-OLIVIER CLERSON');
+            setNom('complet');
         } else if (y < window.scrollY) {
             setTitre('EnTete entete__sortie');
-            setNom('POC');
+            setNom('initiales');
         }
         setY(window.scrollY);
         }, [y]
@@ -31,16 +32,22 @@ export default function EnTete() {
         };
     }, [handleNavigation]);
 
-    console.log(titre);
-
-    const [nom, setNom] = useState('PIERRE-OLIVIER CLERSON');
 
 
     return (
         <header className={titre}>
-            <h1 className="EnTete__nom">
-                {nom}
-            </h1>
+
+            {
+                nom == 'complet' ?
+                    <>
+                        <h1 className="EnTete__nom">PIERRE-OLIVIER CLERSON</h1>
+                        <Liens />
+                    </>
+                :
+                <>
+                    <h1 className="EnTete__nom">POC</h1>
+                </>
+            }
         </header>
     )
 }

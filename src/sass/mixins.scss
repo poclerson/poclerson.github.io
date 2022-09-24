@@ -26,7 +26,7 @@
     }
 
     a {
-        color:map-get($map: $theme, $key: lien);
+        color: map-get($map: $theme, $key: lien);
     }
 
     background-color: map-get($theme, fond);

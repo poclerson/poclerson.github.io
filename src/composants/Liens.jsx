@@ -1,5 +1,6 @@
 import Lien from './Lien';
 import liens from '../donnees/liens';
+import './Liens.scss';
 
 export default function Liens() {
     return (

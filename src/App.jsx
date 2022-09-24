@@ -6,13 +6,15 @@ import './App.scss';
 import './sass/fontes.scss';
 import Accueil from './composants/Accueil';
 
+import {useState} from 'react';
+
 export default function App() {
-  return (
-    <div className="App">
-        <EnTete />
-        <Accueil />
-        <Projets />
-        <Liens />
-    </div>
-  );
+    const [nom, setNom] = useState('initiales');
+    return (
+        <div className="App">
+            <EnTete nom={nom} setNom={setNom} />
+            <Accueil />
+            <Projets />
+        </div>
+    );
 }
