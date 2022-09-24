@@ -20,7 +20,6 @@ export default function Projets() {
     useEffect(() => {
         setY(window.scrollY);
         window.addEventListener("scroll", gererNavigation);
-        console.log(y);
         return () => {
             window.removeEventListener("scroll", gererNavigation);
         };

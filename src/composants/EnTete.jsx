@@ -12,22 +12,23 @@ export default function EnTete({nom, setNom}) {
     const gererNavigation = useCallback(
         e => {
             const window = e.currentTarget;
-                if (y > window.scrollY) {
-                    setTitre('EnTete entete__entree');
-                    setNom('complet');
-                } 
-                
-                else if (y < window.scrollY) {
-                    setTitre('EnTete entete__sortie');
-                    setNom('initiales');
-                }
+            if (y > window.scrollY) {
+                setTitre('EnTete entete__entree');
+                setNom('complet');
+            } 
+            
+            else if (y < window.scrollY) {
+                setTitre('EnTete entete__sortie');
+                setNom('initiales');
+            }
 
             setY(window.scrollY);
         }, [y]
     );
   
     useEffect(() => {
-        setY(window.scrollY);
+
+
         window.addEventListener("scroll", gererNavigation);
         return () => {
             window.removeEventListener("scroll", gererNavigation);

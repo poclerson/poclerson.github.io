@@ -17,7 +17,7 @@
         color: map-get($map: $theme, $key: titre);
     }
 
-    h2 {
+    h2, h3 {
         color: map-get($map: $theme, $key: sous-titre);
     }
 

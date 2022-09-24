@@ -34,7 +34,5 @@
 .entete__sortie {
     h1 {
         animation: entete__sortie .1s linear forwards, fadeIn .5s;
-        -webkit-text-stroke: 1px map-get($theme-clair, titre);
-        color: transparent !important;
     }
 }
