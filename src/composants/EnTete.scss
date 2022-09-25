@@ -35,8 +35,11 @@
 
         .Lien {
             border: .5vw solid transparent;
-            &:hover {
-                border: .5vw solid map-get($map: $theme-clair, $key: fond);
+
+            a {
+                &:hover {
+                    border: .5vw solid map-get($map: $theme-clair, $key: fond);
+                }
             }
 
             @media screen and (min-width: 1024px) {
