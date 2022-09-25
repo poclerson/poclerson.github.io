@@ -1,22 +1,13 @@
 @import '../sass/variables.scss';
 
 .Projets {
-    position: fixed;
+    z-index: 1;
 
     &__liste {
         list-style-type: none;
         padding: 0;
         display: flex;
         flex-direction: column;
-
-        @media screen and (min-width: 1024px) {
-            flex-direction: row;
-            display: inline-flex;
-        }
-    }
-
-    @media screen and (min-width: 1024px) {
-        top: unset;
-        right: 0;
+        align-items: center;
     }
 }

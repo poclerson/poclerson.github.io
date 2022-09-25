@@ -1,25 +1,28 @@
 $h1-tailles-police: (
     0px: 20px,
-    360px: 48px,
+    360px: 36px,
     640px: 56px,
     1024px: 96px,
-    1440px: 124px
+    1440px: 108px,
+    2048px: 136px,
 );
 
 $h2-tailles-police: (
     0px: 18px,
     360px: 36px,
     640px: 42px,
-    1024px: 108px,
-    1440px: 150px
+    1024px: 84px,
+    1440px: 108px,
+    2048px: 124px
 );
 
 $h3-tailles-police: (
     0px: 16px,
     360px: 28px,
     640px: 36px,
-    1024px: 96px,
-    1440px: 124px
+    1024px: 72px,
+    1440px: 84px,
+    2048px: 96px
 );
 
 $h4-tailles-police: (
@@ -27,22 +30,24 @@ $h4-tailles-police: (
     360px: 20px,
     640px: 28px,
     1024px: 42px,
-    1440px: 48px
+    1440px: 48px,
+    2048px: 56px
 );
 
 $p-tailles-police: (
     0px: 12px,
     360px: 14px,
-    640px: 20px,
-    1024px: 28px,
-    1440px: 32px
+    640px: 18px,
+    1024px: 22px,
+    1440px: 26px,
+    2048px: 32px
 );
 
 $icone-tailles: (
     0px: 12px,
-    360px: 14px,
-    640px: 20px,
-    1024px: 28px,
+    360px: 20px,
+    640px: 24px,
+    1024px: 48px,
     1440px: 64px
 );
 

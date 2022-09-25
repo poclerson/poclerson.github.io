@@ -34,13 +34,15 @@ export default function Projet({titre, sousTitre, description, lien, competences
             }}
         >
 
-            <h2 className="Projet__titre">{titre.toUpperCase()}</h2>
-            <img src={"./images/" + cheminVersMiniature} alt={titre} className="Projet__miniature"/>
+            <div className="Projet__couverture">
+                <h2 className="Projet__couverture__titre">{titre.toUpperCase()}</h2>
+                <img src={"./images/" + cheminVersMiniature} alt={titre} className="Projet__couverture__miniature"/>
+            </div>
 
             <div className={ouvert ? "Projet__modale ouvert" : "Projet__modale"}>
                 <div className="Projet__modale__image">
-                    <a href={lien} className="Projet__modale__infos__lien">
-                        <h2 className="Projet__modale__image__titre">{titre.toUpperCase()}</h2>
+                    <a href={lien} className="Projet__modale__image__lien">
+                        <h2 className="Projet__modale__image__lien__titre">{titre.toUpperCase()}</h2>
                     </a>
                     <img src={"./images/" + cheminVersMiniature} alt={titre} className="Projet__modale__image__miniature"/>
                 </div>

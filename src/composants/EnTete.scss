@@ -13,6 +13,7 @@
     left: 0;
 
     width: 100vw;
+    height: 20vh;
     padding: .25em;
     box-sizing: border-box;
 
@@ -22,6 +23,28 @@
 
     .Liens {
         @include taille-police($p-tailles-police);
+        height: 100%;
+        padding: .5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+        }
+
+        .Lien {
+            border: .5vw solid transparent;
+            &:hover {
+                border: .5vw solid map-get($map: $theme-clair, $key: fond);
+            }
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+        }
     }
 
     @media screen and (min-width: 1024px) {
@@ -29,6 +52,7 @@
         height: 100vh;
 
         flex-direction: column;
+        align-items: spa;
 
         &__nom {
             writing-mode: vertical-lr;
@@ -54,5 +78,11 @@
         animation: entete__sortie .1s linear forwards, fadeIn .1s;
     }
 
+    height: unset;
+
     animation: entete__sortie__fond .2s ease-in-out forwards;
+
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-start;
+    }
 }

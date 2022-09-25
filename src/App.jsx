@@ -14,27 +14,11 @@ export default function App() {
 
     const [enteteOuverte, setEnteteOuverte] = useState(false);
 
-
-    const [hauteur, setHauteur] = useState(null);
-    const refProjets = useRef();
-
-    useLayoutEffect(() => {
-        if (window.innerWidth > 1024) {
-            console.log(refProjets.current.getBoundingClientRect())
-            setHauteur(refProjets.current.getBoundingClientRect().width * 7);
-        }
-
-        else {
-
-            setHauteur(refProjets.current.getBoundingClientRect().height * 19);
-        }
-    }, [hauteur])
-
     return (
-        <div className="App" style={{height: hauteur}} >
+        <div className="App" >
             <EnTete ouvert={enteteOuverte} setOuvert={setEnteteOuverte} y={y} setY={setY} />
             <Accueil y={y} setY={setY} />
-            <Projets enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY} refSoi={refProjets} />
+            <Projets enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY} />
         </div>
     );
 }

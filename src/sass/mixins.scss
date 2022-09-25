@@ -1,12 +1,20 @@
-@mixin taille-police($tp-map) {
+@mixin taille-police($tp-map, $important: false) {
     @each $tp-changement, $tp-taille-police in $tp-map {
         @if $tp-changement == null {
             font-size: $tp-taille-police;
         }
 
         @else {
-            @media screen and (min-width: $tp-changement) {
-                font-size: $tp-taille-police;
+            @if ($important) {
+                @media screen and (min-width: $tp-changement) {
+                    font-size: $tp-taille-police !important;
+                }
+            }
+
+            @else {
+                @media screen and (min-width: $tp-changement) {
+                    font-size: $tp-taille-police;
+                }
             }
         }
     }
@@ -31,10 +39,6 @@
 
     a {
         color: map-get($map: $theme, $key: lien);
-
-        &:hover {
-            color: map-get($map: $theme, $key: lien-hover);
-        }
     }
 
     background-color: map-get($theme, fond);
