@@ -45,14 +45,14 @@
         @include texte-contour(map-get($theme-boites, titre));
     }
 
-    background-color: map-get($theme-boites, fond);
-    transition: background-color, .1s, ease-in-out;
+    animation: entete__entree__fond .2s ease-in-out forwards;
 }
 
 .entete__sortie {
+    justify-content: center;
     h1 {
         animation: entete__sortie .1s linear forwards, fadeIn .1s;
     }
 
-    transition: background-color, .1s, ease-in-out;
+    animation: entete__sortie__fond .2s ease-in-out forwards;
 }

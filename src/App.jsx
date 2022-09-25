@@ -6,7 +6,7 @@ import './App.scss';
 import './sass/fontes.scss';
 import Accueil from './composants/Accueil';
 
-import {useState} from 'react';
+import {useState, useRef, useLayoutEffect} from 'react';
 
 export default function App() {
     // Gestion du scroll
@@ -14,11 +14,27 @@ export default function App() {
 
     const [enteteOuverte, setEnteteOuverte] = useState(false);
 
+
+    const [hauteur, setHauteur] = useState(null);
+    const refProjets = useRef();
+
+    useLayoutEffect(() => {
+        if (window.innerWidth > 1024) {
+            console.log(refProjets.current.getBoundingClientRect())
+            setHauteur(refProjets.current.getBoundingClientRect().width * 7);
+        }
+
+        else {
+
+            setHauteur(refProjets.current.getBoundingClientRect().height * 19);
+        }
+    }, [hauteur])
+
     return (
-        <div className="App">
+        <div className="App" style={{height: hauteur}} >
             <EnTete ouvert={enteteOuverte} setOuvert={setEnteteOuverte} y={y} setY={setY} />
             <Accueil y={y} setY={setY} />
-            <Projets enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY}  />
+            <Projets enteteOuverte={enteteOuverte} setEnteteOuverte={setEnteteOuverte} y={y} setY={setY} refSoi={refProjets} />
         </div>
     );
 }

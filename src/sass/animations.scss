@@ -20,6 +20,27 @@
     }
 }
 
+@keyframes entete__entree__fond {
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: map-get($map: $theme-boites, $key: fond);
+    }
+}
+
+@keyframes entete__sortie__fond {
+    0% {
+        background-color: map-get($map: $theme-boites, $key: fond);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+
 @keyframes fadeIn {
     0% {
         color: black;

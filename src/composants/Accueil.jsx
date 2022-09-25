@@ -1,5 +1,5 @@
 import './Accueil.scss';
-import {useEffect, useCallback} from 'react'
+import {useEffect, useCallback, useLayoutEffect} from 'react'
 
 export default function Accueil({y, setY}) {
     // Gestion du scroll
@@ -18,14 +18,6 @@ export default function Accueil({y, setY}) {
         };
     }, [gererNavigation]);
 
-    function opaciteFondCouleur() {
-        if (window.innerWidth >= 1024) {
-            return {opacity: y / 200}
-        }
-
-        return {opacity: 0}
-    }
-
     return (
         <section className="Accueil">
             <div className="Accueil__infos">
@@ -33,7 +25,7 @@ export default function Accueil({y, setY}) {
                 <h4 className="Accueil__date">27 août 2020</h4>
             </div>
             <img src="images/po.JPEG" alt="" className="Accueil__fond"/>
-            <div className="Accueil__couleur-fond" style={opaciteFondCouleur()}></div>
+            <div className="Accueil__couleur-fond" style={{opacity: y / 200}}></div>
         </section>
     )
 }

@@ -1,7 +1,7 @@
 import './EnTete.scss';
 import Liens from './Liens';
 
-import {useState, useEffect, useCallback} from 'react';
+import {useEffect, useCallback} from 'react';
 
 export default function EnTete({ouvert, setOuvert, y, setY}) {
     const gererNavigation = useCallback(
@@ -26,11 +26,8 @@ export default function EnTete({ouvert, setOuvert, y, setY}) {
         };
     }, [gererNavigation]);
 
-    console.log(ouvert);
-
     return (
         <header className={ouvert ? "EnTete entete__entree" : "EnTete entete__sortie"}>
-
             {
                 ouvert ?
                     <>
@@ -38,9 +35,9 @@ export default function EnTete({ouvert, setOuvert, y, setY}) {
                         <Liens />
                     </>
                 :
-                <>
-                    <h1 className="EnTete__nom">POC</h1>
-                </>
+                    <>
+                        <h1 className="EnTete__nom">POC</h1>
+                    </>
             }
         </header>
     )

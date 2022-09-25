@@ -12,6 +12,7 @@
 
     @media screen and (min-width: 1024px) {
         display: flex;
+        width: unset;
         height: 80vh;
         box-sizing: content-box;
         margin-top: 10vh;
@@ -28,6 +29,7 @@
         @media screen and (min-width: 1024px) {
             left: -1.5em;
             bottom: -1em;
+            mix-blend-mode: exclusion;
 
             @include texte-contour(map-get($map: $theme-clair, $key: titre));
         }
@@ -37,6 +39,7 @@
         width: 100%;
 
         @media screen and (min-width: 1024px) {
+            width: unset;
             height: 100%;
         }
     }
