@@ -22,7 +22,7 @@ export default function Accueil({y, setY}) {
         <section className="Accueil">
             <div className="Accueil__infos">
                 <h1 className="Accueil__endroit">Montréal, QC</h1>
-                <h4 className="Accueil__date">27 août 2020</h4>
+                <h4 className="Accueil__date">27/SEP/20</h4>
             </div>
             <img src="images/po.JPEG" alt="" className="Accueil__fond"/>
             <div className="Accueil__couleur-fond" style={{opacity: y / 800}}></div>

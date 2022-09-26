@@ -48,3 +48,10 @@
     color: transparent;
     -webkit-text-stroke: .015em $couleur;
 }
+
+@mixin contour ($couleur) {
+    color: transparent;
+    stroke: $couleur;
+    stroke-width: 1px;
+    -webkit-text-stroke: .015em $couleur;
+}

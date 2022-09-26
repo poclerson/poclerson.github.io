@@ -16,18 +16,28 @@
     &__couverture {
         position: relative;
 
-        &__titre {
+        &__infos {
             position: absolute;
             left: 0;
             bottom: 0;
             margin: .5em;
-    
+            display: flex;
+            flex-direction: column;
+
             @media screen and (min-width: 1024px) {
                 left: -1.5em;
                 bottom: -1em;
-                mix-blend-mode: exclusion;
-    
-                @include texte-contour(map-get($map: $theme-clair, $key: titre));
+                flex-direction: column-reverse;
+            }
+
+            &__titre {
+                @media screen and (min-width: 1024px) { 
+                    -webkit-text-stroke-width: .015em;
+                }
+            }
+
+            &__date {
+                margin-left: .5em;
             }
         }
     
@@ -73,6 +83,14 @@
                 bottom: .5em;
                 margin: .5em;
 
+                &:hover {
+                    h2 {
+                        @media screen and (min-width: 1024px) {
+                            @include contour(map-get($theme-boites, fond));
+                        }
+                    }
+                }   
+
                 @media screen and (min-width: 1024px) {
                     width: 100%;
                     text-align: center;
@@ -80,6 +98,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                 }
             }
     

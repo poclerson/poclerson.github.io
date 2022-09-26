@@ -34,11 +34,14 @@
         }
 
         .Lien {
-            border: .5vw solid transparent;
 
             a {
                 &:hover {
-                    border: .5vw solid map-get($map: $theme-clair, $key: fond);
+                    svg {
+                        color: transparent;
+                        stroke: map-get($theme-boites, titre);
+                        stroke-width: 1px;
+                    }
                 }
             }
 

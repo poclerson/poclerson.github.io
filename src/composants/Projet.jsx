@@ -1,7 +1,7 @@
 import './Projet.scss';
 import {useState, useCallback, useEffect} from 'react';
 
-export default function Projet({titre, sousTitre, description, lien, competences, cheminVersMiniature, enteteOuverte, setEnteteOuverte, y, setY}) {
+export default function Projet({titre, date, sousTitre, description, lien, competences, cheminVersMiniature, couleur, enteteOuverte, setEnteteOuverte, y, setY}) {
     const [ouvert, setOuvert] = useState(false);
 
     // Gestion du scroll
@@ -25,6 +25,10 @@ export default function Projet({titre, sousTitre, description, lien, competences
         };
     }, [gererNavigation]);
 
+    function determinerCouleur() {
+        return {color: couleur == "pale" ? "rgb(255, 244, 180)" : "rgb(25, 0, 255)"}
+    }
+
     return (
         <li 
             className="Projet"
@@ -35,7 +39,10 @@ export default function Projet({titre, sousTitre, description, lien, competences
         >
 
             <div className="Projet__couverture">
-                <h2 className="Projet__couverture__titre">{titre.toUpperCase()}</h2>
+                <div className="Projet__couverture__infos">
+                    <h2 className="Projet__couverture__infos__titre" style={determinerCouleur()} >{titre.toUpperCase()}</h2>
+                    <h4 className="Projet__couverture__infos__date" style={determinerCouleur()} >{date}</h4>
+                </div>
                 <img src={"./images/" + cheminVersMiniature} alt={titre} className="Projet__couverture__miniature"/>
             </div>
 
