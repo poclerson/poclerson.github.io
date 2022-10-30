@@ -1,5 +1,5 @@
 import './Accueil.scss';
-import {useEffect, useCallback, useLayoutEffect} from 'react'
+import {useEffect, useCallback} from 'react'
 
 export default function Accueil({y, setY}) {
     // Gestion du scroll
