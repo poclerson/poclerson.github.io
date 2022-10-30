@@ -32,6 +32,7 @@ export default function EnTete({ouvert, setOuvert, y, setY}) {
                 ouvert ?
                     <>
                         <h1 className="EnTete__nom">PIERRE-OLIVIER CLERSON</h1>
+                        <p className="EnTete__desc">Finissant en techniques d'intégration multimédia</p>
                         <Liens />
                     </>
                 :

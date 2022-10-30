@@ -3,8 +3,6 @@ import projets from '../donnees/projets';
 
 import './Projets.scss';
 
-import {useState, useEffect, useCallback} from 'react';
-
 export default function Projets({enteteOuverte, setEnteteOuverte, y, setY}) {
 
     return (
