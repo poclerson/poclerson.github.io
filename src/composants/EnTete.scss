@@ -6,6 +6,7 @@
     @include taille-police($h1-tailles-police);
 
     display: flex;
+    gap: 5%;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -56,6 +57,11 @@
     &__desc {
         color: map-get($theme-boites, titre);
         text-align: center;
+        flex: 0 1 10%;
+    }
+
+    &__nom {
+        flex: 1 1 50%;
     }
 
     @media screen and (min-width: 1024px) {
